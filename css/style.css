@@ -1,0 +1,16 @@
+html, body {
+    background-color: black;
+    font-size: 14px;
+    color: #ffffff;
+    font-family: 'Open Sans', Arial, sans-serif;
+    
+
+}
+
+/* .nytlogo {
+    margin: 0 auto;
+} */
+
+#selectsection {
+    font-size: 1.3rem;
+}
