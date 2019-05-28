@@ -16,3 +16,11 @@ html {
   *, *:before, *:after {
     box-sizing: inherit;
   }
+
+
+  html, body {
+    background-color: $background-color;
+    font-size: $font-size;
+    color: $font-color;
+    font-family: 'Open Sans', Arial, sans-serif;
+}

@@ -6,6 +6,8 @@ const autoprefixer = require('gulp-autoprefixer');
 const browserSync = require('browser-sync').create();
 const eslint = require('gulp-eslint');
 const prettyError = require('gulp-prettyerror');
+const sourcemaps = require('gulp-sourcemaps');
+
 
 //Sass required element -  https://www.npmjs.com/package/gulp-sass
 const sass = require('gulp-sass');
@@ -13,14 +15,7 @@ const sass = require('gulp-sass');
 const uglifycss = require('gulp-uglifycss');
 
 
-// Static server
-gulp.task('browser-sync', function () {
-    browserSync.init({
-        server: {
-            baseDir: "./"
-        }
-    });
-});
+
 gulp.task("scripts", function () {
     return gulp
         .src("./js/*.js") // What files do we want gulp to consume?
@@ -53,20 +48,10 @@ gulp.task('sass', function (done) {
     done();
 });
 
-
-gulp.task('reload', function () {
-    browserSync.reload();
-});
-
-gulp.task("watch", function () {
-    gulp.watch("./js/*.js", gulp.series("scripts"));
-});
-
-// Set-up BrowserSync and watch for sass
 gulp.task('browser-sync', function (done) {
     browserSync.init({
         server: {
-            baseDir: './'
+            baseDir: "./"
         }
     });
 
@@ -77,8 +62,16 @@ gulp.task('browser-sync', function (done) {
     done();
 });
 
+
+gulp.task('reload', function () {
+    browserSync.reload();
+});
+
+
+
 gulp.task('watch', function (done) {
     gulp.watch('sass/*.scss', gulp.series('sass'));
+    gulp.watch("./js/*.js", gulp.series("scripts"));
     done();
 });
 
