@@ -1,6 +1,7 @@
 $(function () {
 
     const $select = $('select');
+    const $gridContainer = $('.grid-container');
 
     $select.on('change', function (event) {
         console.log("event", event.target.value);
@@ -10,6 +11,24 @@ $(function () {
             url: "https://api.nytimes.com/svc/topstories/v2/" + event.target.value + ".json?api-key=pKVd06Mh3sAKyIaCdi5xzTGMW6D5w17t"
         }).done(function (data) {
             console.log("data", data);
+            // console.log(data.results[0].multimedia[4].url);
+
+            data.results.forEach(function (value, index) {
+                if (index <= 11) {
+                    // && $multimedia.length !== 0
+                    // const $multimedia = $('data.results[index].multimedia');
+                    $gridContainer.append(`<li>
+                        <a href="#">
+                            <div style="background-image: url(${data.results[index].multimedia[4].url})">
+                                <p>${data.results[index].abstract}</p>
+                            </div>
+                        </a>
+                    </li>`);
+
+                };
+
+            });
+
 
 
 

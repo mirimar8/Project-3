@@ -93,18 +93,38 @@ html, body {
     .top-header .choose-section .select-section {
       font-size: 17px; }
 
-.articles {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap; }
+.articles .grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(12, 1fr); }
+  .articles .grid-container li a {
+    bottom: 0;
+    text-decoration: none; }
+    .articles .grid-container li a div {
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      height: 400px;
+      width: 400px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-pack: end;
+          -ms-flex-pack: end;
+              justify-content: flex-end; }
+      .articles .grid-container li a div p {
+        line-height: 1.5rem;
+        color: #ffffff;
+        font-size: 15px;
+        padding: 0.5rem;
+        background: rgba(0, 0, 0, 0.6); }
 
 .copyright {
   text-align: center;
   margin-top: 180px;
+  margin-bottom: 100px;
   color: #c2c2c2; }

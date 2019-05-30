@@ -1,6 +1,40 @@
 
 .articles {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(12,1fr);
+        li {
+            
+            a {
+                bottom:0;
+                text-decoration: none;
+
+                div{
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    background-position: center;
+                    height:400px;
+                    width:400px;
+                    display:flex;
+                    flex-direction: column;
+                    justify-content: flex-end;
+
+            
+
+                    p{
+                        line-height: 1.5rem;
+                        color: $font-color;
+                        font-size: 15px;
+                        padding: 0.5rem; 
+                        background:rgba(0, 0, 0, 0.6);
+                        
+                    }
+                }
+            }
+        }
+        
+        
+    }
+    
 }
