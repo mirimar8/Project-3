@@ -5,25 +5,77 @@
     justify-content: center;
     align-items: center;
 
+    @include tablet {
+        flex-direction: row;
+    }
+
     .logo {
         text-align: center;
         margin-top: 150px;
         margin-bottom: 20px;
+
+        @include tablet {
+            width: 170px;
+        }
+    }
+
+    .logo-on-click {
+        margin-top: 0;
+        width: 150px;
+
+        @include tablet {
+            width: 80px;
+            margin-left: 80px;
+        }
+    }
+
+    .choose-section-wrapper {
+        @include tablet {
+            margin-top: 120px;
+        }
+    }
+
+    .choose-section-wrapper-on-click {
+        @include tablet {
+            margin-top: -20px;
+            margin-left: 90px;
+        }
     }
 
     p {
+        @include tablet {
+            font-size: $font-size;
+        }
         font-size: $font-size - 2;
+        text-align: center;
     }
 
     .choose-section {
         margin-top: 15px;
+        margin-bottom: 100px;
+        @include tablet {
+            margin-bottom: 0;
+        }
+
         .select-section {
             font-size: $font-size + 3;
         }
-        
     }
-    
+
+    .choose-section-on-click {
+        margin-bottom: 0;
+    }
 }
+
+.top-header-on-click {
+    height: 300px;
+    @include tablet {
+        height: 150px;
+        justify-content: flex-start;
+    }
+}
+
+
 
 
 

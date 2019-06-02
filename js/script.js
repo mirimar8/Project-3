@@ -2,9 +2,19 @@ $(function () {
 
     const $select = $('select');
     const $gridContainer = $('.grid-container');
+    // const $multimedia = $('data.results[index].multimedia');
+
 
     $select.on('change', function (event) {
         console.log("event", event.target.value);
+
+        $(".logo").addClass("logo-on-click");
+        $(".top-header").addClass("top-header-on-click");
+        $(".choose-section").addClass("choose-section-on-click");
+        $(".choose-section-wrapper").addClass("choose-section-wrapper-on-click");
+        $(".copyright").addClass("copyright-on-click");
+
+        $gridContainer.text('');
         // console.log($select.val());
         $.ajax({
             method: "GET",
@@ -13,12 +23,12 @@ $(function () {
             console.log("data", data);
             // console.log(data.results[0].multimedia[4].url);
 
-            data.results.forEach(function (value, index) {
-                if (index <= 11) {
-                    // && $multimedia.length !== 0
-                    // const $multimedia = $('data.results[index].multimedia');
+            let count = 0;
+            data.results.forEach(function (element, index) {
+                if (count < 12 && data.results[index].multimedia.length >= 5) {
+                    count += 1;
                     $gridContainer.append(`<li>
-                        <a href="#">
+                        <a href="${data.results[index].url}">
                             <div style="background-image: url(${data.results[index].multimedia[4].url})">
                                 <p>${data.results[index].abstract}</p>
                             </div>
@@ -29,25 +39,8 @@ $(function () {
 
             });
 
-
-
-
-
-
-
-
-            // // $(".results").append("<img src='http://openweathermap.org/img/w/" + data.weather[0].icon + ".png'/>");
-            // $(".results").append(`<img src="http://openweathermap.org/img/w/${data.weather[0].icon}.png" />`);
-            // $(".results").append(`<p>${data.weather[0].main}</p>`);
-            // $(".results").append(`<p>${data.weather[0].description}</p>`);
-
-
-
-
         });
 
     });
-
-
 
 });
