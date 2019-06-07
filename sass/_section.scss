@@ -4,16 +4,31 @@
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: repeat(12,1fr);
-        li {
+        margin-top: 0;
+
+        @include tablet {
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: repeat(6,1fr);
+           
+        }
+
+        @include desktop {
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: repeat(3,1fr);
             
+
+        }
+
+        li {
+
             a {
                 text-decoration: none;
 
-                div{
+                div {
                     background-repeat: no-repeat;
                     background-size: cover;
                     background-position: center;
-                    height:400px;
+                    height:420px;
                     width:400px;
                     display:flex;
                     flex-direction: column;
@@ -21,7 +36,7 @@
 
             
 
-                    p{
+                    p {
                         line-height: 1.5rem;
                         color: $font-color;
                         font-size: 15px;
@@ -33,7 +48,13 @@
             }
         }
         
-        
     }
+
+    .ajax-loader {
+        display: none;
+        width: 40px;
+        margin-left: 50%;
+
+    }    
     
 }

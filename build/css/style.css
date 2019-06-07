@@ -68,7 +68,7 @@ html, body {
   font-family: 'Open Sans', Arial, sans-serif; }
 
 .top-header {
-  height: 450px;
+  height: 400px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -81,52 +81,75 @@ html, body {
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
-          align-items: center; }
+          align-items: center;
+  margin-bottom: 140px;
+  margin-top: 90px; }
   @media (min-width: 600px) {
     .top-header {
       -webkit-box-orient: horizontal;
       -webkit-box-direction: normal;
           -ms-flex-direction: row;
-              flex-direction: row; } }
+              flex-direction: row;
+      margin-top: 60px;
+      margin-bottom: 170px; } }
+  @media (min-width: 1000px) {
+    .top-header {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -webkit-box-pack: start;
+          -ms-flex-pack: start;
+              justify-content: flex-start;
+      margin-left: 0; } }
   .top-header .logo {
     text-align: center;
     margin-top: 150px;
     margin-bottom: 20px; }
     @media (min-width: 600px) {
       .top-header .logo {
-        width: 170px; } }
+        width: 150px;
+        margin-right: 20px; } }
+    @media (min-width: 1000px) {
+      .top-header .logo {
+        width: 300px; } }
   .top-header .logo-on-click {
     margin-top: 0;
     width: 150px; }
     @media (min-width: 600px) {
       .top-header .logo-on-click {
-        width: 80px;
-        margin-left: 80px; } }
+        width: 70px;
+        margin-left: 100px; } }
+    @media (min-width: 1000px) {
+      .top-header .logo-on-click {
+        margin-left: 40px; } }
   @media (min-width: 600px) {
     .top-header .choose-section-wrapper {
       margin-top: 120px; } }
   @media (min-width: 600px) {
     .top-header .choose-section-wrapper-on-click {
       margin-top: -20px;
-      margin-left: 90px; } }
+      margin-left: 70px; } }
   .top-header p {
     font-size: 12px;
     text-align: center; }
     @media (min-width: 600px) {
       .top-header p {
         font-size: 14px; } }
+    @media (min-width: 1000px) {
+      .top-header p {
+        font-size: 16px; } }
   .top-header .choose-section {
     margin-top: 15px;
     margin-bottom: 100px; }
-    @media (min-width: 600px) {
-      .top-header .choose-section {
-        margin-bottom: 0; } }
     .top-header .choose-section .select-section {
       font-size: 17px; }
   .top-header .choose-section-on-click {
     margin-bottom: 0; }
 
 .top-header-on-click {
+  margin-bottom: 0;
+  margin-top: 0;
   height: 300px; }
   @media (min-width: 600px) {
     .top-header-on-click {
@@ -134,18 +157,30 @@ html, body {
       -webkit-box-pack: start;
           -ms-flex-pack: start;
               justify-content: flex-start; } }
+  @media (min-width: 1000px) {
+    .top-header-on-click {
+      margin-left: 0; } }
 
 .articles .grid-container {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(12, 1fr); }
+  grid-template-rows: repeat(12, 1fr);
+  margin-top: 0; }
+  @media (min-width: 600px) {
+    .articles .grid-container {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: repeat(6, 1fr); } }
+  @media (min-width: 1000px) {
+    .articles .grid-container {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: repeat(3, 1fr); } }
   .articles .grid-container li a {
     text-decoration: none; }
     .articles .grid-container li a div {
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
-      height: 400px;
+      height: 420px;
       width: 400px;
       display: -webkit-box;
       display: -ms-flexbox;
@@ -164,12 +199,19 @@ html, body {
         padding: 0.5rem;
         background: rgba(0, 0, 0, 0.6); }
 
+.articles .ajax-loader {
+  display: none;
+  width: 40px;
+  margin-left: 50%; }
+
 .copyright {
   text-align: center;
-  margin-top: 180px;
-  margin-bottom: 100px;
   color: #c2c2c2; }
+  @media (min-width: 1000px) {
+    .copyright {
+      text-align: left;
+      margin-left: 30px; } }
 
 .copyright-on-click {
-  margin-top: 20px;
+  margin-top: 30px;
   margin-bottom: 50px; }

@@ -7,6 +7,7 @@ $(function () {
 
     $select.on('change', function (event) {
         console.log("event", event.target.value);
+        $(".ajax-loader").show();
 
         $(".logo").addClass("logo-on-click");
         $(".top-header").addClass("top-header-on-click");
@@ -15,6 +16,7 @@ $(function () {
         $(".copyright").addClass("copyright-on-click");
 
         $gridContainer.text('');
+
         // console.log($select.val());
         $.ajax({
             method: "GET",
@@ -22,6 +24,8 @@ $(function () {
         }).done(function (data) {
             console.log("data", data);
             // console.log(data.results[0].multimedia[4].url);
+            $(".ajax-loader").hide();
+
 
             let count = 0;
             data.results.forEach(function (element, index) {
