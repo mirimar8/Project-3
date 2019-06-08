@@ -181,7 +181,7 @@ html, body {
       background-size: cover;
       background-position: center;
       height: 420px;
-      width: 400px;
+      width: 100%;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;

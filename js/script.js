@@ -32,7 +32,7 @@ $(function () {
                 if (count < 12 && data.results[index].multimedia.length >= 5) {
                     count += 1;
                     $gridContainer.append(`<li>
-                        <a href="${data.results[index].url}">
+                        <a href="${data.results[index].url}" target="_blank">
                             <div style="background-image: url(${data.results[index].multimedia[4].url})">
                                 <p>${data.results[index].abstract}</p>
                             </div>
