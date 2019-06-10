@@ -63,7 +63,7 @@ html {
 
 html, body {
   background-color: black;
-  font-size: 14px;
+  font-size: 16px;
   color: #ffffff;
   font-family: 'Open Sans', Arial, sans-serif; }
 
@@ -195,7 +195,7 @@ html, body {
       .articles .grid-container li a div p {
         line-height: 1.5rem;
         color: #ffffff;
-        font-size: 15px;
+        font-size: 16px -1;
         padding: 0.5rem;
         background: rgba(0, 0, 0, 0.6); }
 
