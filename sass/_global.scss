@@ -1,14 +1,7 @@
-/* Extra resetting 
---------------------*/
-
-/* Makes all images responsive */
-
 img { 
     max-width: 100%;
     height: auto;
 }
-
-/* apply a natural box layout model to all elements, but allowing components to change */
 
 html {
     box-sizing: border-box;
