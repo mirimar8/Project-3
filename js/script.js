@@ -13,7 +13,6 @@ $(function () {
         $(".choose-section").addClass("choose-section-on-click");
         $(".choose-section-wrapper").addClass("choose-section-wrapper-on-click");
         $(".copyright").addClass("copyright-on-click");
-
         $gridContainer.text('');
 
         $.ajax({
