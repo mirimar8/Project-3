@@ -6,6 +6,8 @@ $(function () {
 
 
     $select.on('change', function (event) {
+	if (event.target.value === 'sections') return
+
         $ajaxLoader.show();
 
         $(".logo").addClass("logo-on-click");
