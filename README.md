@@ -19,15 +19,18 @@ You can find a link to my project here: https://mirimar8.github.io/Instanews-App
 
 
 ## Personal learnings
-* Implementation of a mobile-first, responsive layout (optimized   for three    required screen sizes: mobile, tablet and desktop).
+* Implementation of a mobile-first, responsive layout (optimized for three      required screen sizes: mobile, tablet and desktop).
 * Use of Grid to have a responsive layout for the NYT stories.
 * Use of jQuery's "ajax" method to fetch data from the Top Stories v2 NYT API   endpoint.
 * Implementation of automation tasks with Gulp such as uglification, watch,     and browser-sync.
  
+ ## Installation
 
-## License
-MIT © 
+1. Download repository and then add it to your directory.
 
+2. Run `npm install`.
+
+3. Run `gulp`.
 
 
 
